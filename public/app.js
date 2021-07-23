@@ -30,6 +30,7 @@ start.addEventListener("click", () =>{
 });
 
 
+
   //mapbox expects the opposite of coordinates, it wants longitude and then latitude
 mapboxgl.accessToken = 'pk.eyJ1IjoiYWxiZS1ydG8xIiwiYSI6ImNrcmR4Y2Y3dDF3bTcydWxxenNlMTI4bmQifQ.aR6NAaPodQLDgePGeVQ7hQ';
 const map = new mapboxgl.Map({
