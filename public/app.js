@@ -7,6 +7,7 @@ const stop= document.querySelector("#stop");
 
 const coordinates =[];
 
+
 start.addEventListener("click", () =>{
  //watchPosition will get position everytime browser thinks
  //the position changed
