@@ -2,9 +2,9 @@
 import "https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js";
 
 
-
 const start= document.querySelector("#start");
 const stop= document.querySelector("#stop");
+
 
 const coordinates =[];
 

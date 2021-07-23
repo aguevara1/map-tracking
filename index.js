@@ -7,7 +7,6 @@ app.use(express.static("./public"));
 let clientRoutes=require("./routes/client.js");
 
 
-
 app.use(clientRoutes);
 
 

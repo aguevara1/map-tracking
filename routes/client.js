@@ -3,7 +3,6 @@ let express = require("express");
 const router=express.Router();
 const {create} = require("../controllers/client");
 
-
 // tasks
 router.post('/clients', create);  
 
