@@ -6,12 +6,7 @@ import "https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js";
 const start= document.querySelector("#start");
 const stop= document.querySelector("#stop");
 
-const coordinates =[
-  [13.40499, 51.520024],
-  [13.40500, 51.520025],
-  [13.40502, 51.520026],
-  [13.40503, 51.520027],
-];
+const coordinates =[];
 
 start.addEventListener("click", () =>{
  //watchPosition will get position everytime browser thinks
