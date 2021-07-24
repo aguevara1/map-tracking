@@ -25,12 +25,50 @@ start.addEventListener("click", () =>{
    }
    
 
+
+  //mapbox expects the opposite of coordinates, it wants longitude and then latitude
+  mapboxgl.accessToken = 'pk.eyJ1IjoiYWxiZS1ydG8xIiwiYSI6ImNrcmR4Y2Y3dDF3bTcydWxxenNlMTI4bmQifQ.aR6NAaPodQLDgePGeVQ7hQ';
+  const map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/streets-v11',
+  center:coordinates[0],
+  zoom: 15
+  });
+  
+  map.on('load', function () {
+      map.addSource('route', {
+      type: 'geojson',
+      data: {
+      type: 'Feature',
+      properties: {},
+      geometry: {
+      type: 'LineString',
+      coordinates:coordinates
+      }
+      }
+      });
+      map.addLayer({
+      id: 'route',
+      type: 'line',
+      source: 'route',
+      layout: {
+      'line-join': 'round',
+      'line-cap': 'round'
+      },
+      paint: {
+      'line-color': '#FF0000',
+      'line-width': 10
+      }
+      });
+      });
+
+
  );
 
 });
 
 
-
+/*
   //mapbox expects the opposite of coordinates, it wants longitude and then latitude
 mapboxgl.accessToken = 'pk.eyJ1IjoiYWxiZS1ydG8xIiwiYSI6ImNrcmR4Y2Y3dDF3bTcydWxxenNlMTI4bmQifQ.aR6NAaPodQLDgePGeVQ7hQ';
 const map = new mapboxgl.Map({
@@ -66,3 +104,5 @@ map.on('load', function () {
     }
     });
     });
+
+    */
