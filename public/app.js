@@ -21,7 +21,9 @@ start.addEventListener("click", () =>{
 
    }, (error) => console.log(error),
    {
-      enableHighAccuracy:true
+      enableHighAccuracy:true,
+      timeout:5000,
+      maximumAge:Infinity
    });
    
 
