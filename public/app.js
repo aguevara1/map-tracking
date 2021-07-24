@@ -22,7 +22,7 @@ start.addEventListener("click", () =>{
    }, (error) => console.log(error),
    {
       enableHighAccuracy:true
-   }
+   });
    
 
 
@@ -63,7 +63,7 @@ start.addEventListener("click", () =>{
       });
 
 
- );
+
 
 });
 
